@@ -1,23 +1,5 @@
----
+old offline docs:
+https://gist.github.com/onuryilmaz/89a29261652299d7cf768223fd61da02
 
-- name: set ip forwarding
-  sysctl:
-    name: net.ipv4.ip_forward
-    value: '1'
-    state: present
-    sysctl_file: /etc/sysctl.conf
 
-- name: ensure net bridge for ipv4
-  sysctl:
-    name: net.bridge.bridge-nf-call-iptables
-    value: '1'
-    state: present
-    sysctl_file: /etc/sysctl.conf
-
-- name: ensure net bridge for ipv6
-  sysctl:
-    name: net.bridge.bridge-nf-call-ip6tables
-    value: '1'
-    state: present
-    sysctl_file: /etc/sysctl.conf
-
+new ansible kubernetes docs:
