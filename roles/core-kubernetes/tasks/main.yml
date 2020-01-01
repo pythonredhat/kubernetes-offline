@@ -47,7 +47,6 @@
 - name: enable kubelet service
   systemd:
     name: kubelet
-    state: started
     enabled: yes
 
 ###add kubernetes user?????
