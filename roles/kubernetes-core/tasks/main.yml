@@ -8,7 +8,7 @@
   replace:
     path: /etc/fstab
     regexp: '^([^#].*?\sswap\s+sw\s+.*)$'
-    replace: '#\1'
+    replace: '# \1'
 
 - name: set ip forwarding
   sysctl:

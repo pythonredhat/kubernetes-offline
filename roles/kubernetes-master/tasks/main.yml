@@ -6,3 +6,9 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134
 
 #third
 kubectl taint nodes --all node-role.kubernetes.io/master-
+
+
+
+####notes
+this can pull images beforehand:
+kubeadm config images pull
