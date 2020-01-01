@@ -1,14 +1,14 @@
 ---
 
 - name: disable swap now
-  shell: | 
-    swapoff -a 
+  command: swapoff -a
+  when: ansible_swaptotal_mb > 0
 
 - name: permanently disable swap
-  replace:
-    path: /etc/fstab
-    regexp: '^([^#].*?\sswap\s+sw\s+.*)$'
-    replace: '# \1'
+  mount:
+    name: swap
+    fstype: swap
+    state: absent
 
 - name: set ip forwarding
   sysctl:
