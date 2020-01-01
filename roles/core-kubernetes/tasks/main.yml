@@ -26,7 +26,30 @@
     policy: targeted
     state: permissive
 
-###add kubernetes user
+#- name: modprobe br_netfilter
+#- name: setup kubernetes rpm repos
+
+ - name: install kubelet package
+   yum: 
+     name: kubelet
+     state: present
+
+ - name: install kubeadm package
+   yum: 
+     name: kubeadm
+     state: present
+
+- name: install kubectl package
+  yum: 
+    name: kubectl
+    state: present
+
+- name: enable kubelet service
+  systemd:
+    name: kubelet
+    state: started
+    enabled: yes
+
+###add kubernetes user?????
 ###add firewall rules
-###add kubernetes rpm repo
 ####mount kubernetes tarball nfs share
