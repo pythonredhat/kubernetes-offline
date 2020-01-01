@@ -28,3 +28,5 @@
 
 ###add kubernetes user
 ###add firewall rules
+###add kubernetes rpm repo
+####mount kubernetes tarball nfs share
