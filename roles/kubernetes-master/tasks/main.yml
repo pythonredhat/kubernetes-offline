@@ -1,12 +1,28 @@
-#first command 
+#first command (install)
 kubeadm init --pod-network-cidr=10.244.0.0/16
 
-#second
+#second phase (set configs)
+sudo cp /etc/kubernetes/admin.conf $HOME/
+sudo chown $(id -u):$(id -g) $HOME/admin.con
+export KUBECONFIG=$HOME/admin.conf
+
+
+#third phase (networking)
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
 
-#third
+##### sanity checks (ensure all pods start)
+#make sure all pods start
+kubectl get pods --all-namespaces
+#make sure kubernetes api is reachable
+kubectl version
+#check which ip the cluster got set to:
+kubectl cluster-info
+
+#fourth phase (untaint the master to allow pods creation)
 kubectl taint nodes --all node-role.kubernetes.io/master-
 
+#fifth phase:
+install the kubernete gui pod
 
 
 ####notes
