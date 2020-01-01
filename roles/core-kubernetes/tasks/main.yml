@@ -29,15 +29,15 @@
 #- name: modprobe br_netfilter
 #- name: setup kubernetes rpm repos
 
- - name: install kubelet package
-   yum: 
-     name: kubelet
-     state: present
+- name: install kubelet package
+  yum: 
+    name: kubelet
+    state: present
 
- - name: install kubeadm package
-   yum: 
-     name: kubeadm
-     state: present
+- name: install kubeadm package
+  yum: 
+    name: kubeadm
+    state: present
 
 - name: install kubectl package
   yum: 
