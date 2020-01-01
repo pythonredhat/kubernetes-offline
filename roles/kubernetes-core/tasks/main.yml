@@ -1,5 +1,15 @@
 ---
 
+- name: disable swap now
+  shell: | 
+    swapoff -a 
+
+- name: permanently disable swap
+  replace:
+    path: /etc/fstab
+    regexp: '^([^#].*?\sswap\s+sw\s+.*)$'
+    replace: '#\1'
+
 - name: set ip forwarding
   sysctl:
     name: net.ipv4.ip_forward
