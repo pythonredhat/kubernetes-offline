@@ -21,8 +21,10 @@ kubectl cluster-info
 kubectl taint nodes --all node-role.kubernetes.io/master-
 
 #fifth phase:
-install the kubernete gui pod
-
+#setup user for kubernetes gui pod
+kubectl apply -f kubernetes-adminuser.yaml
+#install the kubernete gui pod
+kubectl apply -f dashboard.yaml
 
 ####notes
 this can pull images beforehand:
