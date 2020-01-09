@@ -1,11 +1,10 @@
-#first command (install)
-kubeadm init --pod-network-cidr=10.244.0.0/16
+#first command (install) (need to explicitly assign ip address)
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.56.101 --apiserver-bind-port 6443
 
 #second phase (set configs)
 sudo cp /etc/kubernetes/admin.conf $HOME/
 sudo chown $(id -u):$(id -g) $HOME/admin.con
 export KUBECONFIG=$HOME/admin.conf
-
 
 #third phase (networking)
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
@@ -28,3 +27,6 @@ install the kubernete gui pod
 ####notes
 this can pull images beforehand:
 kubeadm config images pull
+
+
+#look into the systemd docker driver message that comes from the kube init message

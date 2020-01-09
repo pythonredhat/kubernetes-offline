@@ -21,3 +21,13 @@ libnetfilter_cttimeout-1.0.0-6.el7_7.1.x86_64.rpm
 #centos base 7.7
 libnetfilter_queue-1.0.2-2.el7_2.x86_64.rpm
 socat-1.7.3.2-2.el7.x86_64.rpm
+
+
+#official secure install instructions:
+https://github.com/kubernetes/dashboard/blob/master/docs/user/installation.md#recommended-setup
+
+#quick README install instructions:
+https://github.com/kubernetes/dashboard/blob/master/README.md
+
+
+
