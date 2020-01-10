@@ -29,6 +29,9 @@ https://github.com/kubernetes/dashboard/blob/master/docs/user/installation.md#re
 #quick README install instructions:
 https://github.com/kubernetes/dashboard/blob/master/README.md
 
+#access dashboard instuctions (node port):
+https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/1.7.x-and-above.md
+
 #commands
 kubectl get secret,sa,role,rolebinding,services,deployments --namespace=kubernetes-dashboard | grep dashboard
 

@@ -40,8 +40,11 @@ spec:
   ports:
     - port: 443
       targetPort: 8443
+      nodePort: 32001
+      protocol: TCP 
   selector:
     k8s-app: kubernetes-dashboard
+  type: ClusterIP
 
 ---
 
