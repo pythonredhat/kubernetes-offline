@@ -36,6 +36,9 @@
     policy: targeted
     state: permissive
 
+- name: adjust firewall rules
+   
+
 #- name: modprobe br_netfilter
 #- name: setup kubernetes rpm repos
 
@@ -58,6 +61,8 @@
   systemd:
     name: kubelet
     enabled: yes
+
+
 
 ###add kubernetes user?????
 ###add firewall rules

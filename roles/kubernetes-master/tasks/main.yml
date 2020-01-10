@@ -25,6 +25,7 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 kubectl apply -f kubernetes-adminuser.yaml
 #install the kubernete gui pod
 kubectl apply -f dashboard.yaml
+##expose dashboard with node port
 
 ####notes
 this can pull images beforehand:
