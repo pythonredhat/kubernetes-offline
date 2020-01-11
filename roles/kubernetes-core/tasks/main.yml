@@ -36,7 +36,7 @@
     policy: targeted
     state: permissive
 
-- name: adjust firewall rules
+#- name: adjust firewall rules
    
 
 #- name: modprobe br_netfilter
