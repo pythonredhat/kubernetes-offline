@@ -33,3 +33,4 @@ kubeadm config images pull
 
 
 #look into the systemd docker driver message that comes from the kube init message
+[WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
