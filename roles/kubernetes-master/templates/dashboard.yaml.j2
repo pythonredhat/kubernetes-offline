@@ -37,6 +37,7 @@ metadata:
   name: kubernetes-dashboard
   namespace: kubernetes-dashboard
 spec:
+  externalTrafficPolicy: Cluster 
   ports:
     - port: 443
       targetPort: 8443
@@ -197,7 +198,9 @@ spec:
             - containerPort: 8443
               protocol: TCP
           args:
-            - --auto-generate-certificates
+            #- --auto-generate-certificates
+            - --tls-cert-file=/root/.kube/certs/dashboard.crt
+            - --tls-key-file=/root/.kube/certs/dashboard.key 
             - --namespace=kubernetes-dashboard
             # Uncomment the following line to manually specify Kubernetes API server Host
             # If not specified, Dashboard will attempt to auto discover the API server and connect
