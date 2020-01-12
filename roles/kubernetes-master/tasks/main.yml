@@ -20,11 +20,24 @@ kubectl cluster-info
 #fourth phase (untaint the master to allow pods creation)
 kubectl taint nodes --all node-role.kubernetes.io/master-
 
-#fifth phase:
+##########fifth phase (DASHBOARD setup)#######
+
+#create certs with openssl and place in $HOME/certs
+mkdir certs  ( At user home path )
+openssl req -nodes -newkey rsa:2048 -keyout certs/dashboard.key -out certs/dashboard.csr -subj "/C=/ST=/L=/O=/OU=/CN=kubernetes-dashboard"
+openssl x509 -req -sha256 -days 365 -in certs/dashboard.csr -signkey certs/dashboard.key -out certs/dashboard.crt
+
+#create dashboard namespace, certs secret and apply dashboard
+kubectl create namespace kubernetes-dashboard
+kubectl create secret generic kubernetes-dashboard-certs --from-file=$HOME/certs -n kubernetes-dashboard
+kubectl apply -f dashboard.yaml
+
+
 #setup user for kubernetes gui pod
 kubectl apply -f dashboard-adminuser.yaml
-#install the kubernete gui pod
-kubectl apply -f dashboard.yaml
+
+#########################################################
+
 ##expose dashboard with node port
 
 ####notes
