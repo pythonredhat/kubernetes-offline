@@ -40,6 +40,18 @@
   register: flannel_result
   changed_when: "'created' in flannel_result.stdout"
 
+- name: taint status
+  command: "{{ item }}"
+  with_items:
+    - kubectl get nodes -o json | jq '.items[].spec.taints'
+  register: taint_status
+
+- name: untaint master node
+  command: "{{ item }}"
+  with_items:
+    - kubectl taint nodes --all node-role.kubernetes.io/master-
+  when: taint_status != null
+
 
 
 
