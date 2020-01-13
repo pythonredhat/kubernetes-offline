@@ -1,0 +1,25 @@
+---
+- name: initialize kubernetes master
+  command: >
+    kubeadm init 
+    --pod-network-cidr=10.244.0.0/16
+    --apiserver-advertise-address 192.168.56.101 
+    --apiserver-bind-port 644
+  register: kubeadmin_init
+  failed_when: false
+  when: not kubernetes_init_stat.stat.exists
+
+- name: symlink kubectl admin.conf to /root/.kube/conf
+  file:
+    src: /etc/kubernetes/admin.conf
+    dest: /root/.kube/config
+    state: link
+
+- name: set path for kubeconfig
+  environment: 
+    KUBECONFIG: "/root/.kube/conf"
+
+
+
+
+

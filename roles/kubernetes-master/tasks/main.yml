@@ -37,8 +37,8 @@ kubectl apply -f dashboard.yaml
 kubectl apply -f dashboard-adminuser.yaml
 
 #get dashboard token for access
-kubectl get secrets -n kubernetes-dashboard
-kubectl describe secret kubernetes-dashboard-token-gtvm9 -n kubernetes-dashboard
+kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+
 
 #########################################################
 
