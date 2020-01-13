@@ -19,6 +19,27 @@
   environment: 
     KUBECONFIG: "/root/.kube/conf"
 
+- name: create kubernetes-offline directory
+  file: 
+    path: /opt/kubernetes-offline
+    state: directory
+    mode: '0755'
+  
+- name: lay down kube flannel yaml
+  template:
+    src: /templates/kube-flannel.yml.j2
+    dest: /opt/kubernetes-offline/kube-flannel.yml
+    owner: root
+    group: root
+    mode: '770'
+
+- name: configure flannel networking
+  command: "{{ item }}"
+  with_items:
+    - kubectl apply -f /opt/kubernetes-offline/kube-flannel.yaml
+  register: flannel_result
+  changed_when: "'created' in flannel_result.stdout"
+
 
 
 
