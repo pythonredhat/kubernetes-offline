@@ -67,6 +67,11 @@
     name: jq
     state: present
 
+- name: install nfs-utils package
+  yum:
+    name: nfs-utils
+    state: present
+
 - name: create kubernetes certs directory
   file: 
     path: /root/.kube/certs
