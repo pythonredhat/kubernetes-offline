@@ -78,6 +78,18 @@
     state: directory
     mode: '0755'
 
+- name: create kubernetes packages directory
+  file: 
+    path: /kubernetes-packages
+    state: directory
+    mode: '0755'
+
+- name: create kubernetes images directory
+  file: 
+    path: /kubeernetes-images
+    state: directory
+    mode: '0755'
+
 - name: mount certs
   mount:
     path: /root/.kube/certs
