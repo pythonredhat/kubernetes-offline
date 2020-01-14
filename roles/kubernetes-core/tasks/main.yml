@@ -67,6 +67,20 @@
     name: jq
     state: present
 
+- name: create kubernetes certs directory
+  file: 
+    path: /root/.kube/certs
+    state: directory
+    mode: '0755'
+
+- name: mount certs
+  mount:
+    path: /root/.kube/certs
+    src: 192.168.56.102:/certs
+    fstype: nfs 
+    opts: defaults
+    state: present
+
 
 
 ###add kubernetes user?????
