@@ -1,0 +1,4 @@
+--- 
+
+- name: Mount All
+  command: mount -a

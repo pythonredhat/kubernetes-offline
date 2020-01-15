@@ -105,6 +105,8 @@
     fstype: nfs 
     opts: defaults
     state: present
+  notify:
+    - Mount All
 
 - name: mount kubernetes packages
   mount:
@@ -113,6 +115,8 @@
     fstype: nfs 
     opts: defaults
     state: present
+  notify: 
+    - Mount All
 
 - name: create a yum repository
   yum_repository:
