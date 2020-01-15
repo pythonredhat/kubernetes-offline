@@ -11,7 +11,7 @@
 
 - name: print paths
   debug: 
-    msg: "An item: "{{ item.path }}"
+    msg: "An item: {{ item.path }}"
   with_items: "{{ kuberntes_iamges"
 
 - name: load kubernetes images
