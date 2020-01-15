@@ -23,4 +23,5 @@
 
 - name: load kubernetes images
   command: docker load < {{ item }}
-  with_items: "{{ kubernetes_images.stdout_lines }}""
+  with_items:
+    - "{{ kubernetes_images.stdout_lines }}"
