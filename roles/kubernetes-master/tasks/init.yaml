@@ -1,16 +1,25 @@
 ---
 
 - name: register kubernetes images
-  find: 
-    paths: /kubernetes-images
-    patterns: "*.tar"
+  command: "ls /kubernetes-images"
   register: kubernetes_images
 
-- name: load kubernetes images
-  command: "docker load < {{ item }}"
-  with_items:
-    - kubernetes_images.stdout_lines
+#- name: print kubernetes images
+#  debug: var=kubernetes_images
 
+#- name: print paths
+#  debug: 
+#    msg: "An item: {{ item.path }}"
+#  with_items: "{{ kubernetes_images }}"
+
+- debug: var={{item}}
+  with_items: kubernetes_images.stdout_lines
+
+- name: load kubernetes images
+  shell: docker load < /kubernetes-images/{{ item }}
+  with_items:
+    - "{{ kubernetes_images.stdout_lines }}"
+    
 - name: initialize kubernetes master
   command: >
     kubeadm init 

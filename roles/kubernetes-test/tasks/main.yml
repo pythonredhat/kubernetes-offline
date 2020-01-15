@@ -25,3 +25,4 @@
   shell: docker load < /kubernetes-images/{{ item }}
   with_items:
     - "{{ kubernetes_images.stdout_lines }}"
+  
