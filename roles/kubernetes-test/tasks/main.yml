@@ -10,5 +10,5 @@
   debug: var=kubernetes_images
 
 - name: load kubernetes images
-  command: "docker load < {{ item }}"
+  command: "docker load < {{ item.path }}"
   with_items: "{{ kubernetes_images }}"
