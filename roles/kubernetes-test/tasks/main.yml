@@ -7,5 +7,5 @@
   register: kubernetes_images
 
 - name: load kubernetes images
-  command: "docker load < {{ item.path }}"
+  command: "docker load < {{ item }}"
   with_items: "{{ kubernetes_images }}"
