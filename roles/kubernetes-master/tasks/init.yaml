@@ -9,7 +9,7 @@
 - name: load kubernetes images
   command: "docker load < {{ item }}"
   with_items:
-    - kubernetes_images
+    - kubernetes_images.stdout_lines
 
 - name: initialize kubernetes master
   command: >

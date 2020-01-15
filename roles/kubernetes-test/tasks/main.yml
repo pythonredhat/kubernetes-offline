@@ -4,9 +4,9 @@
   find: 
     paths: /kubernetes-images
     patterns: "*.tar"
+    filetype: "file"
   register: kubernetes_images
 
 - name: load kubernetes images
-  command: "docker load < {{ item }}"
-  with_items:
-    - kubernetes_images
+  command: "docker load < {{ item.path }}"
+  with_items: "{{ kubernetes_images }}""
