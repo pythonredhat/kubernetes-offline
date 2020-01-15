@@ -12,7 +12,7 @@
 - name: print paths
   debug: 
     msg: "An item: {{ item.path }}"
-  with_items: "{{ kuberntes_iamges"
+  with_items: "{{ kubernetes_iamges"
 
 - name: load kubernetes images
   command: docker load < {{ item.path }}
