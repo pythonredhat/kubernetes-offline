@@ -9,6 +9,11 @@
 - name: print kubernetes images
   debug: var=kubernetes_images
 
+- name: print paths
+  debug: 
+    msg: "An item: "{{ item.path }}"
+  with_items: "{{ kuberntes_iamges"
+
 - name: load kubernetes images
   command: docker load < {{ item.path }}
   with_items: '{{ kubernetes_images }}'
