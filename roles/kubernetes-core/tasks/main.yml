@@ -86,7 +86,7 @@
 
 - name: create kubernetes images directory
   file: 
-    path: /kubeernetes-images
+    path: /kubernetes-images
     state: directory
     mode: '0755'
 
