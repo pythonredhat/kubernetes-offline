@@ -22,6 +22,6 @@
   with_items: kubernetes_images.stdout_lines
 
 - name: load kubernetes images
-  command: docker load < {{ item }}
+  command: docker load < /kubernetes-images/{{ item }}
   with_items:
     - "{{ kubernetes_images.stdout_lines }}"
