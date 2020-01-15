@@ -41,5 +41,20 @@ cp -R * $RPM_BUILD_ROOT/opt/kubernetes-offline
 rm -rf %{buildroot}
 
 %files
-%defattr(0755,root,root)
-%dir /opt/kubernetes-offline 
+%defattr(0755,root,root,0755)
+%dir /opt/kubernetes-offline/playbooks
+%dir /opt/kubernetes-offline/roles
+/opt/kubernetes-offline/*
+#/opt/kubernetes-offline/ansible.cfg
+#/opt/kubernetes-offline/kubernetes-offline.spec
+#/opt/kubernetes-offline/README.md 
+#/opt/kubernetes-offline/playbooks/kubernete-test.yml
+#/opt/kubernetes-offline/roles/kubernetes-core/handlers/main.yml
+#/opt/kubernetes-offline/roles/kubernetes-core/tasks/main.yml
+#/opt/kubernetes-offline/roles/kubernetes-master/tasks/dashboard.yaml
+#/opt/kubernetes-offline/roles/kubernetes-master/tasks/init.yaml
+#/opt/kubernetes-offline/roles/kubernetes-master/tasks/main.yml
+#/opt/kubernetes-offline/roles/kubernetes-master/templates/dashboard-adminuser.yaml.j2
+#/opt/kubernetes-offline/roles/kubernetes-master/templates/dashboard.yaml.j2
+#/opt/kubernetes-offline/roles/kubernetes-master/templates/kube-flannel.yml.j2
+#/opt/kubernetes-offline/roles/kubernetes-test/tasks/main.yml
