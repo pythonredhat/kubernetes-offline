@@ -11,4 +11,4 @@
 
 - name: load kubernetes images
   command: docker load < {{ item.path }}
-  with_items: "{{ kubernetes_images }}"
+  with_items: '{{ kubernetes_images }}'
