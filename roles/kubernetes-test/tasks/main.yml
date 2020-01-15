@@ -6,6 +6,9 @@
     patterns: "*.tar"
   register: kubernetes_images
 
+- name: print kubernetes images
+  debug: var=kubernetes_images
+
 - name: load kubernetes images
   command: "docker load < {{ item }}"
   with_items: "{{ kubernetes_images }}"
