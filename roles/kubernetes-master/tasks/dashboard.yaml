@@ -1,0 +1,34 @@
+#create dashboard namespace, certs secret and apply dashboard
+kubectl create namespace kubernetes-dashboard
+kubectl create secret generic kubernetes-dashboard-certs --from-file=$HOME/certs -n kubernetes-dashboard
+kubectl apply -f dashboard.yaml
+
+
+#setup user for kubernetes gui pod
+kubectl apply -f dashboard-adminuser.yaml
+
+
+-------------------
+
+- name: create kubernetes-dashboard namespace
+  k8s:
+    name: kubernetes-dashboard
+    api_version: v1
+    kind: Namespace
+    state: present
+
+- name: create secret for kubernetes-dashboard
+  command: "{{ item }}"
+  with_items:
+    - kubectl create secret generic kubernetes-dashboard-certs --from-file=$HOME/certs -n kubernetes-dashboard
+  when: taint_status != null
+
+- name: Create a Service object by reading the definition from a file
+  k8s:
+    state: present
+    src: /opt/kuberntes-offline/dashboard.yaml
+
+- name: Create a Service object by reading the definition from a file
+  k8s:
+    state: present
+    src: /opt/kuberntes-offline/dashboard-adminuser.yaml

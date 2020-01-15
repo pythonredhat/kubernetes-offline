@@ -90,13 +90,36 @@
     state: directory
     mode: '0755'
 
-- name: mount certs
+- name: mount kubernetes certs
   mount:
     path: /root/.kube/certs
     src: 192.168.56.102:/certs
     fstype: nfs 
     opts: defaults
     state: present
+
+- name: mount kubernetes images
+  mount:
+    path: /kubernetes-images
+    src: 192.168.56.102:/kubernetes-images
+    fstype: nfs 
+    opts: defaults
+    state: present
+
+- name: mount kubernetes packages
+  mount:
+    path: /kubernetes-packages
+    src: 192.168.56.102:/kubernetes-packages
+    fstype: nfs 
+    opts: defaults
+    state: present
+
+- name: create a yum repository
+  yum_repository:
+    name: kubernetes
+    description: kubernetes
+    baseurl: file:///kubernetes-packages/
+    gpgcheck: no 
 
 
 
