@@ -1,4 +1,16 @@
 ---
+
+- name: register kubernetes images
+  find: 
+    paths: /kubernetes-images
+    patterns: "*.tar"
+    register: kubernetes-images
+
+- name: load kubernetes images
+  command: "docker load < {{ item }}"
+  with_items:
+    - kubernetes-images
+
 - name: initialize kubernetes master
   command: >
     kubeadm init 
