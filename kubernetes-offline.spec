@@ -29,7 +29,7 @@ Kubernetes Offline
 
 %install
 mkdir -p /opt/kubernetes-offline 
-cp -a kubernetes-offline/. $RPM_BUILD_ROOT/
+cp -a kubernetes-offline-%{version}-%{release}/. $RPM_BUILD_ROOT/
 #install -m 0755 -d $RPM_BUILD_ROOT/opt/kubernetes-offline 
 #install -m 0755 docker-compose.yml $RPM_BUILD_ROOT/opt/elk-service/docker-compose.yml
 #install -m 0755 -d $RPM_BUILD_ROOT/opt/elk-service/nginx
