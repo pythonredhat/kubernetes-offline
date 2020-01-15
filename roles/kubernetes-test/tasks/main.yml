@@ -1,7 +1,7 @@
 ---
 
 - name: register kubernetes images
-  find: 
+  find:
     paths: /kubernetes-images
     patterns: "*.tar"
   register: kubernetes_images
