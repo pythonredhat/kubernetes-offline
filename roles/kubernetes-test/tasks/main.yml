@@ -4,7 +4,6 @@
   find: 
     paths: /kubernetes-images
     patterns: "*.tar"
-    filetype: "file"
   register: kubernetes_images
 
 - name: load kubernetes images
