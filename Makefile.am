@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = foreign
 #bin_PROGRAMS = kubernetes-offline
-kubernetes-offline_SOURCES = kubernetes-offline 
+#kubernetes-offline_SOURCES = kubernetes-offline 
 
 build-rpm:
   #rpm-devtree
