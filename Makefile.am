@@ -7,9 +7,9 @@ build-dir:
 tar:
     tar czvf kubernetes-offline.tar.gz kubernetes-offline
 cp-tar:
-    cp kubernetes-offline.tar.gz /root/rpmbuild/SOURCES 
+    cp kubernetes-offline.tar.gz /root/rpmbuild/SOURCES
 cp-spec:
     cp kubernetes-offline.spec /root/rpmbuild/SPECS
 rpm-build:
-    rpmbuild -ab /root/rpmbuild/SPECS/kubernetes-offline.spec 
+    rpmbuild -ab /root/rpmbuild/SPECS/kubernetes-offline.spec
 
