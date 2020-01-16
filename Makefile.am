@@ -4,7 +4,7 @@ AUTOMAKE_OPTIONS = foreign
 
 build-dir:
     mkdir -p rpmbuild/{BUILD,RPMS/{noarch,athlon,i386,i486,i588,i686,x86_64},SOURCES,SPECS,SRPMS}
-tar:  
+tar:
     tar czvf kubernetes-offline.tar.gz kubernetes-offline
 cp-tar:
     cp kubernetes-offline.tar.gz /root/rpmbuild/SOURCES 

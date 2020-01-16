@@ -63,4 +63,13 @@ https://github.com/ugoviti/synbak/blob/master/Makefile.am
 --------------
 
 build notes:
-yum groupinstall 'Development Tools'
+1) yum groupinstall 'Development Tools'
+2) clone repo
+3) autoreconf -i
+4) ./configure
+5) make 
+6) make install
+
+resources:
+#minute 9:53
+https://www.youtube.com/watch?v=4q_inV9M_us
