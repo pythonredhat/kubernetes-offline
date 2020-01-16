@@ -42,3 +42,19 @@ openssl req -nodes -newkey rsa:2048 -keyout certs/dashboard.key -out certs/dashb
 openssl x509 -req -sha256 -days 365 -in certs/dashboard.csr -signkey certs/dashboard.key -out certs/dashboard.crt
 
 
+
+#good makefile example for rpm building
+https://stackoverflow.com/questions/31254308/makefile-for-building-an-rpm-works-locally-but-not-in-jenkins
+
+#another good makefile example for rpm building
+https://github.com/wmoxam/rpmbuild/blob/master/Makefile
+
+####excellent example of all the makefiles and how they work together
+https://stackoverflow.com/questions/2531827/what-are-makefile-am-and-makefile-in
+
+
+###makefile.am and configure.ac hello world examples:
+https://www.gnu.org/software/automake/manual/html_node/Hello-World.html
+
+#### great example of a makefile.am for building an rpm
+https://github.com/ugoviti/synbak/blob/master/Makefile.am
