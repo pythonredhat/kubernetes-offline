@@ -58,3 +58,9 @@ https://www.gnu.org/software/automake/manual/html_node/Hello-World.html
 
 #### great example of a makefile.am for building an rpm
 https://github.com/ugoviti/synbak/blob/master/Makefile.am
+
+
+--------------
+
+build notes:
+yum groupinstall 'Development Tools'
