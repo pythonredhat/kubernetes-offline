@@ -12,6 +12,6 @@ tar:
 cp-tar:
 	cp ./src/kubernetes-offline.tar.gz ./rpmbuild/SOURCES
 cp-spec:
-	cp ./src/kubernetes-offline.spec ./rpmbuild/SPECS
+	cp kubernetes-offline.spec ./rpmbuild/SPECS
 rpm-build:
 	rpmbuild -ab ./rpmbuild/SPECS/kubernetes-offline.spec
