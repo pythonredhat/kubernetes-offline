@@ -14,4 +14,4 @@ cp-tar:
 cp-spec:
 	cp kubernetes-offline.spec ./rpmbuild/SPECS
 rpm-build:
-	rpmbuild --buildroot $PWD -ba ./rpmbuild/SPECS/kubernetes-offline.spec
+	rpmbuild --buildroot ${PWD} -ba ./rpmbuild/SPECS/kubernetes-offline.spec
