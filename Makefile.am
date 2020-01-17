@@ -12,4 +12,3 @@ cp-spec:
     cp kubernetes-offline.spec /root/rpmbuild/SPECS
 rpm-build:
     rpmbuild -ab /root/rpmbuild/SPECS/kubernetes-offline.spec
-
