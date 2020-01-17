@@ -8,7 +8,7 @@ build-dir:
 source-dir:
 	mkdir src
 rename-dir:
-    mv ../kubernetes-offline ../kubernetes-offline-1.0.0
+	mv ../kubernetes-offline ../kubernetes-offline-1.0.0
 tar:
 	tar czvf ./src/kubernetes-offline.tar.gz --exclude=./src .
 cp-tar:
