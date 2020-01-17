@@ -8,7 +8,7 @@ build-dir:
 source-dir:
 	mkdir src
 tar:
-	tar czvf ./src/kubernetes-offline.tar.gz ../kubernetes-offline
+	tar czvf ./src/kubernetes-offline.tar.gz --exclude=./src .
 cp-tar:
 	cp kubernetes-offline.tar.gz ./rpmbuild/SOURCES
 cp-spec:
