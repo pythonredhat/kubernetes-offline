@@ -1,12 +1,14 @@
 AUTOMAKE_OPTIONS = foreign
 #bin_PROGRAMS = kubernetes-offline
 #kubernetes-offline_SOURCES = kubernetes-offline
-all: build-dir source-dir tar cp-tar cp-spec rpm-build
+all: build-dir source-dir rename-dir tar cp-tar cp-spec rpm-build
 	echo "Making all"
 build-dir:
 	mkdir -p rpmbuild/{BUILD,RPMS/{noarch,athlon,i386,i486,i588,i686,x86_64},SOURCES,SPECS,SRPMS}
 source-dir:
 	mkdir src
+rename-dir:
+    mv ../kubernetes-offline ../kubernetes-offline-1.0.0
 tar:
 	tar czvf ./src/kubernetes-offline.tar.gz --exclude=./src .
 cp-tar:
