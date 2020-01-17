@@ -11,8 +11,8 @@ Release: %{release}
 Source0: %{name}-%{unmangled_version}.tar.gz  
 License: MIT
 Group: Development/Libraries
-#BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRoot: /opt/development/kubernetes-offline
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+#BuildRoot: /opt/development/kubernetes-offline
 Prefix: %{_prefix}
 BuildArch: noarch
 Vendor: Turbo Python <office@realpython.com>

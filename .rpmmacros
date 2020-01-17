@@ -1,2 +1,0 @@
-%_topdir %(echo $PWD)/rpmbuild
-%_tmppath %{_topdir}/tmp
