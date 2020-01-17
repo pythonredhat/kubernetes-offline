@@ -5,8 +5,10 @@ all: build-dir tar cp-tar cp-spec rpm-build
 	echo "Making all"
 build-dir:
 	mkdir -p rpmbuild/{BUILD,RPMS/{noarch,athlon,i386,i486,i588,i686,x86_64},SOURCES,SPECS,SRPMS}
+source-dir:
+	mkdir src
 tar:
-	tar czvf kubernetes-offline.tar.gz ../kubernetes-offline
+	tar czvf ./src/kubernetes-offline.tar.gz ../kubernetes-offline
 cp-tar:
 	cp kubernetes-offline.tar.gz ./rpmbuild/SOURCES
 cp-spec:
