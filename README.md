@@ -73,3 +73,8 @@ build notes:
 resources:
 #minute 9:53
 https://www.youtube.com/watch?v=4q_inV9M_us
+
+###directing rpms to use new build areas:
+http://ftp.rpm.org/max-rpm/s1-rpm-anywhere-different-build-area.html
+
+
