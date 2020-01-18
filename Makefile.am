@@ -10,9 +10,9 @@ source-dir:
 rename-dir:
 	mv ../kubernetes-offline ../kubernetes-offline-1.0.0
 tar:
-	tar czvf ./src/kubernetes-offline.tar.gz --exclude=./src .
+	tar czvf ./src/kubernetes-offline-1.0.0.tar.gz --exclude=./src .
 cp-tar:
-	cp ./src/kubernetes-offline.tar.gz ./rpmbuild/SOURCES/kubernetes-offline-1.0.0.tar.gz 
+	cp ./src/kubernetes-offline-1.0.0.tar.gz ./rpmbuild/SOURCES
 cp-spec:
 	cp kubernetes-offline.spec ./rpmbuild/SPECS
 rpm-build:
