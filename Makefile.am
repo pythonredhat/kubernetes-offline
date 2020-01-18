@@ -6,9 +6,9 @@ all: build-dir source-dir rename-dir tar cp-tar cp-spec rpm-build
 build-dir:
 	rpmdev-setuptree
 source-dir:
-	mkdir src
+	mkdir -p src/kubernetes-offline-1.0.0
 rename-dir:
-	cp ../kubernetes-offline ./src/kubernetes-offline-1.0.0
+	cp * ./src/kubernetes-offline-1.0.0
 tar:
 	tar czvf ./src/kubernetes-offline-1.0.0.tar.gz ./src/kubernetes-offline-1.0.0
 cp-tar:
