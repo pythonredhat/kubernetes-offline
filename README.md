@@ -102,3 +102,13 @@ cp-spec:
 rpm-build:
 	rpmbuild -ba /root/rpmbuild/SPECS/kubernetes-offline.spec
 #	rpmbuild --define '_topdir ${PWD}/rpmbuild' --buildroot ${PWD}/rpmbuild -ba ./rpmbuild/SPECS/kubernetes-offline.spec
+
+# build an rpm with docker
+```bash
+http://saule1508.github.io/build-rpm-with-docker/
+```
+
+# build rpm packages using docker
+```bash
+http://cddevel.com/blog/posts/building-rpm-packages-using-docker
+```
