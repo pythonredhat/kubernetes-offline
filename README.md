@@ -1,11 +1,10 @@
-old offline docs:
+# old offline docs:
 https://gist.github.com/onuryilmaz/89a29261652299d7cf768223fd61da02
 
-
-new ansible kubernetes docs:
+# new ansible kubernetes docs:
 https://github.com/kubernetes-sigs/kubespray
 
-### list of packages for Kubernetes install
+# list of packages for Kubernetes install
 # kubernetes repo
 cri-tools-1.13.0-0.x86_64.rpm
 kubeadm-1.17.0-0.x86_64.rpm
