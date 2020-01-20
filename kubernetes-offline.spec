@@ -1,14 +1,13 @@
 %define name kubernetes-offline 
 %define version 1.0.0
 %define unmangled_version 1.0.0
-%define unmangled_version 1.0.0
 %define release 1
 
 Summary: Kubernetes Offline 
 Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: %{name}-%{unmangled_version}.tar.gz  
+Version: ##VERSION##
+Release: ##RELEASE##
+Source0: %{name}-%{version}-{%release}.tar.gz  
 License: MIT
 Group: Development/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
