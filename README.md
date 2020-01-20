@@ -110,3 +110,7 @@ http://saule1508.github.io/build-rpm-with-docker/
 
 # build rpm packages using docker
 http://cddevel.com/blog/posts/building-rpm-packages-using-docker
+
+# build technique:
+building on branch develop or feature -> the rpm will be called mypackage-7.0.0-snapshot-gitcommitsha-noarch.rpm
+building on another branch -> the rpm will be called mypackage-7.0.0-xxx-noarch.rpm, where xxx is BUILD_NUMBER
