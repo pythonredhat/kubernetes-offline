@@ -8,4 +8,5 @@ COPY . /opt/rpmbuild
 #ENV HOME /home/rpmbuild 
 #WORKDIR /home/rpmbuild
 WORKDIR /opt/rpmbuild 
+RUN chmod +x /opt/rpmbuild/build-rpm.sh
 #RUN mkdir -p /home/rpmbuild/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
