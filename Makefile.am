@@ -4,7 +4,7 @@ AUTOMAKE_OPTIONS = foreign
 all: build-dir source-dir rename-dir tar cp-tar cp-spec version-release-update rpm-build
 	echo "Making all"
 build-dir:
-	rpmdev-setuptree
+	mkdir -p /root/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SPRMS}
 source-dir:
 	mkdir -p ./src/kubernetes-offline-1.0.0
 rename-dir:
