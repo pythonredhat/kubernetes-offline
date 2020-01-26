@@ -1,5 +1,6 @@
 FROM centos:centos7
 RUN yum -y install rpm-build redhat-rpm-config make gcc git vi tar unzip rpmlint && yum clean all
+RUN yum -y groupinstall 'Development Tools'
 #RUN useradd rpmbuild -u 5002 -g users -p rpmbuild 
 RUN mkdir -p /opt/rpmbuild
 #COPY . /home/rpmbuild 
