@@ -6,7 +6,7 @@ if [ -z $BUILD_NUMBER ]; then
   exit 1
 fi
 
-RELEASE=$BUILD_NUMBER
+export RELEASE=$BUILD_NUMBER
 
 #set version
 if [ -z $VERSION ]; then
