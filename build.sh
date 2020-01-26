@@ -16,7 +16,7 @@ do
   esac
 done
 
-VERSION= $(cat version.txt)
+VERSION=$(cat version.txt)
 
 #need to parse for feature here too..
 if [ $BRANCH == "develop" ] || [ $BRANCH == *"feature"* ]; then
@@ -39,4 +39,4 @@ if [ -z $WORKSPACE ]; then
   WORKSPACE=$(pwd)
 fi
 
-docker run --rm=true -v ${WORKSPACE}/artifacts:/artifacts -e BUILD_NUMBER=${BUILD_NUMBER} -e VERSION=$VERSION --user rpmbuild ${PACKAGE_TO_BUILD}-build /home/rpmbuild/build_rpm.sh 
+docker run --rm=true -v ${WORKSPACE}/artifacts:/artifacts -e BUILD_NUMBER=${BUILD_NUMBER} -e VERSION=$VERSION --user rpmbuild ${PACKAGE_TO_BUILD}-build /home/rpmbuild/build-rpm.sh 
