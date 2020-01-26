@@ -26,5 +26,5 @@ fi
 #cp ${PACKAGE}.spec $HOME/rpmbuild/SPECS
 
 #patch spec file with version, release, date
-sed -i -e "s/##VERSION##/${VERSION}/" -e "s/##RELEASE##/${RELEASE}/" $HOME/rpmbuild/SPECS/${PACKAGE}.spec
-sed -i -e "s/##DATE##/`date +\"%a %b %d %Y\"`/" $HOME/rpmbuild/SPECS/${PACKAGE}.spec
+sed -i -e "s/##VERSION##/${VERSION}/" -e "s/##RELEASE##/${RELEASE}/" /root/rpmbuild/SPECS/${PACKAGE}.spec
+sed -i -e "s/##DATE##/`date +\"%a %b %d %Y\"`/" /root/rpmbuild/SPECS/${PACKAGE}.spec
