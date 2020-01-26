@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS = foreign
 #bin_PROGRAMS = kubernetes-offline
 #kubernetes-offline_SOURCES = kubernetes-offline
-all: build-dir source-dir rename-dir tar cp-tar cp-spec rpm-build
+all: build-dir source-dir rename-dir tar cp-tar cp-spec version-release-update rpm-build
 	echo "Making all"
 build-dir:
 	rpmdev-setuptree
@@ -15,5 +15,7 @@ cp-tar:
 	cp ./src/kubernetes-offline-1.0.0.tar.gz /root/rpmbuild/SOURCES
 cp-spec:
 	cp kubernetes-offline.spec /root/rpmbuild/SPECS
+version-release-update:
+	/opt/rpmbuild/set-version-release.sh
 rpm-build:
 	rpmbuild -ba /root/rpmbuild/SPECS/kubernetes-offline.spec
