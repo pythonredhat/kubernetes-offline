@@ -5,4 +5,5 @@ COPY . /home/rpmbuild
 USER rpmbuild 
 ENV HOME /home/rpmbuild 
 WORKDIR /home/rpmbuild
+RUN chmod +x /home/rpmbuild/build-rpm.sh
 RUN mkdir -p /home/rpmbuild/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
