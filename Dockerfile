@@ -6,4 +6,3 @@ USER rpmbuild
 ENV HOME /home/rpmbuild 
 WORKDIR /home/rpmbuild
 RUN mkdir -p /home/rpmbuild/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
-RUN 

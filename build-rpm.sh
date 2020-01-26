@@ -35,5 +35,5 @@ autoreconf -i
 make
 
 #copy rpm to the artifact directory
-if [[ -d /artifacs ]]; then 
+if [[ -d /artifacts ]]; then 
   cp ./RPMS/noarch/${PACKAGE}*.rpm /artifacts/
