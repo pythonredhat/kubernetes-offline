@@ -1,7 +1,7 @@
-%define name kubernetes-offline 
-%define version 1.0.0
-%define unmangled_version 1.0.0
-%define release 1
+#%define name kubernetes-offline 
+#%define version 1.0.0
+#%define unmangled_version 1.0.0
+#%define release 1
 
 Summary: Kubernetes Offline 
 Name: %{name}
