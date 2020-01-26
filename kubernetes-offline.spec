@@ -7,7 +7,7 @@ Summary: Kubernetes Offline
 Name: %{name}
 Version: ##VERSION##
 Release: ##RELEASE##
-Source0: %{name}-%{version}-{%release}.tar.gz  
+Source0: %{name}-%{version}-%{release}.tar.gz  
 License: MIT
 Group: Development/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
