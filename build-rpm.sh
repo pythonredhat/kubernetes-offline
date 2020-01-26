@@ -23,7 +23,7 @@ if [ ! -f ./${PACKAGE}.spec ]; then
   exit 1
 fi 
 
-cp ${PACKAGE}.spec $HOME/rpmbuild/SPECS
+#cp ${PACKAGE}.spec $HOME/rpmbuild/SPECS
 
 #patch spec file with version, release, date
 sed -i -e "s/##VERSION##/${VERSION}/" -e "s/##RELEASE##/${RELEASE}/" /home/rpmbuild/rpmbuild/SPECS/${PACKAGE}.spec

@@ -19,7 +19,7 @@ done
 VERSION=$(cat version.txt)
 
 #need to parse for feature here too..
-if [[ $BRANCH == "develop" ]] || [[ $BRANCH == *"feature"* ]]; then
+if [ $BRANCH == "develop" ] || [ $BRANCH == *"feature"* ]; then
   BUILD_NUMBER="snapshot"
 fi
 
