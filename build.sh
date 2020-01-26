@@ -40,4 +40,4 @@ if [ -z $WORKSPACE ]; then
 fi
 
 #docker run --rm=true -v ${WORKSPACE}/artifacts:/artifacts -e BUILD_NUMBER=${BUILD_NUMBER} -e VERSION=$VERSION --user rpmbuild ${PACKAGE_TO_BUILD}-build /home/rpmbuild/build-rpm.sh 
-ocker run --rm=true -v ${WORKSPACE}/artifacts:/artifacts -e BUILD_NUMBER=${BUILD_NUMBER} -e VERSION=$VERSION ${PACKAGE_TO_BUILD}-build /opt/rpmbuild/build-rpm.sh
+docker run --rm=true -v ${WORKSPACE}/artifacts:/artifacts -e BUILD_NUMBER=${BUILD_NUMBER} -e VERSION=$VERSION ${PACKAGE_TO_BUILD}-build /opt/rpmbuild/build-rpm.sh
