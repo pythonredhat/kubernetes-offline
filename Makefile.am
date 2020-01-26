@@ -10,7 +10,7 @@ source-dir:
 rename-dir:
 	rsync -av --progress . ./src/kubernetes-offline-${VERSION}-${RELEASE} --exclude ./src 
 tar:
-	cd src && tar czvf kubernetes-offline-${VERSION}-${RELEASE}.tar.gz kubernetes-offline
+	cd src && tar czvf kubernetes-offline-${VERSION}-${RELEASE}.tar.gz kubernetes-offline-${VERSION}-${RELEASE}
 cp-tar:
 	cp ./src/kubernetes-offline-${VERSION}-${RELEASE}.tar.gz /root/rpmbuild/SOURCES
 cp-spec:
