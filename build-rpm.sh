@@ -17,7 +17,7 @@ if [ -z $VERSION ]; then
 fi
 
 #prep spec file (some of this stuff is in Makefile already...)
-cd /home/rpmbuild
+cd //opt/rpmbuild
 if [ ! -f ./${PACKAGE}.spec ]; then
   echo Sorry, can not find rpm spec file
   exit 1
