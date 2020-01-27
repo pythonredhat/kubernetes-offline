@@ -1,4 +1,4 @@
-#%define name kubernetes-offline 
+%define name kubernetes-offline 
 #%define version 1.0.0
 #%define unmangled_version 1.0.0
 #%define release 1
@@ -24,7 +24,7 @@ Url: https://github.com/pythonredhat/kubernetes-offline
 Kubernetes Offline 
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-%{release}
 %build 
 
 %install
